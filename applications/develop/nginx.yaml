@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-develop
-  namespace: argocd
+    name: nginx-develop
+    namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/aoi1/argocd-repo-sample.git
-    targetRevision: main
-    path: manifests/develop
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: develop
-  syncPolicy:
-    automated: {}
+    project: default
+    source:
+        repoURL: https://github.com/rust-doer/argocd-repo-sample.git
+        targetRevision: main
+        path: manifests/develop
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: develop
+    syncPolicy:
+        automated: {}

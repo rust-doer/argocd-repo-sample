@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-production
-  namespace: argocd
+    name: nginx-production
+    namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/aoi1/argocd-repo-sample.git
-    targetRevision: main
-    path: manifests/production
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: production
-  syncPolicy:
-    automated: {}
+    project: default
+    source:
+        repoURL: https://github.com/rust-doer/argocd-repo-sample.git
+        targetRevision: main
+        path: manifests/production
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: production
+    syncPolicy:
+        automated: {}
